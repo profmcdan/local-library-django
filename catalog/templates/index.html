@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="jumbotron">
+
+        <h1>Local Library Home</h1>
+
+          <p>Welcome to <em>LocalLibrary</em>, a very basic Django website</p>
+
+        <h2>Dynamic content</h2>
+
+          <p>The library has the following record counts:</p>
+          <ul>
+            <li><strong>Books:</strong> {{ num_books }}</li>
+            <li><strong>Copies:</strong> {{ num_instances }}</li>
+            <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+            <li><strong>Authors:</strong> {{ num_authors }}</li>
+          </ul>
+
+          <hr>
+
+          <p>You have visited this site {{ num_visits }}
+            {% if num_visits == 1 %}
+              time
+            {% else %}
+              times
+            {% endif %} in the past
+           </p>
+
+           <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  </div>
+{% endblock %}
