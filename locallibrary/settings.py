@@ -28,7 +28,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'hsgi9^m7mz-6%cfr8^e47=$sbmgyd&
 # DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'arcane-taiga-22394.herokuapp.com',
+]
 
 
 # Application definition
